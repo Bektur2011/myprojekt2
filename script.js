@@ -166,5 +166,5 @@ loginBtn.addEventListener("click", () => {
   }
 
   localStorage.setItem("user", JSON.stringify(user));
-  window.location.href = "../menu/menu.html";
+  window.location.href = "menu.html";
 });

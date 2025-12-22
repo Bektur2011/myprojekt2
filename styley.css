@@ -45,3 +45,19 @@ main {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   margin-bottom: 15px;
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 15px;
+  }
+  header h2 {
+    font-size: 16px;
+  }
+  header button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  main {
+    padding: 15px 15px;
+  }
+}

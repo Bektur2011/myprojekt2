@@ -1,5 +1,5 @@
 const user = JSON.parse(localStorage.getItem("user"));
-if (!user) window.location.href = "../login/index.html";
+if (!user) window.location.href = "index.html";
 
 const welcome = document.getElementById("welcome");
 welcome.textContent = user.role === "admin"
@@ -7,7 +7,7 @@ welcome.textContent = user.role === "admin"
   : `Добро пожаловать, ${user.name}`;
 
 document.getElementById("historyBtn").addEventListener("click", () => {
-  window.location.href = "../history/history.html";
+  window.location.href = "history.html";
 });
 
 let lessons = JSON.parse(localStorage.getItem("lessons")) || [];
@@ -78,10 +78,10 @@ function openSettingsModal(lessonIndex) {
 
 closeModalBtn.onclick = () => modalOverlay.classList.add("hidden");
 
-if (user.role === "admin") {
-  const adminControls = document.getElementById("adminControls");
-  adminControls.style.display = "flex";
+const adminControls = document.getElementById("adminControls");
+adminControls.style.display = user.role === "admin" ? "flex" : "none";
 
+if (user.role === "admin") {
   updateLessonSelect();
 
   document.getElementById("addLessonBtn").addEventListener("click", () => {

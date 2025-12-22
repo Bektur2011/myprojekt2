@@ -6,7 +6,7 @@ function formatDate(dateStr) {
 }
 
 document.getElementById("backBtn").addEventListener("click", () => {
-  window.location.href = "../menu/menu.html";
+  window.location.href = "menu.html";
 });
 
 let lessons = JSON.parse(localStorage.getItem("lessons")) || [];
