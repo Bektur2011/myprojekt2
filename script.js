@@ -15,12 +15,12 @@ const users = [
     role: "user"
   },
   {
-    login: "eb57_09",
+    login: "eb58_99",
     name: "Примбай",
     role: "user"
   },
   {
-    login: "kd88_01",
+    login: "kd18_01",
     name: "Исхак",
     role: "user"
   },
