@@ -81,8 +81,9 @@ closeModalBtn.onclick = () => modalOverlay.classList.add("hidden");
 const adminControls = document.getElementById("adminControls");
 adminControls.style.display = user.role === "admin" ? "flex" : "none";
 
+updateLessonSelect();
+
 if (user.role === "admin") {
-  updateLessonSelect();
 
   document.getElementById("addLessonBtn").addEventListener("click", () => {
     const name = document.getElementById("newLessonInput").value.trim();
